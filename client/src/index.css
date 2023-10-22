@@ -4,6 +4,10 @@ body {
   font-family: "Sora", sans-serif;
 }
 
+.site-layout .site-layout-background {
+  background: #dbd7d7;
+}
+
 .item-button button {
   margin-top: 20px;
   width: 200px;

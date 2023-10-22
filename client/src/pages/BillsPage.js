@@ -7,6 +7,7 @@ import { useReactToPrint } from "react-to-print";
 import axios from "axios";
 import { Modal, Button, Table } from "antd";
 import "../styles/InvoiceStyles.css";
+import "../styles/Billpage.css";
 const BillsPage = () => {
   const componentRef = useRef();
   const dispatch = useDispatch();

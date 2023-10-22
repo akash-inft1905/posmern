@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card } from "antd";
 import { useDispatch } from "react-redux";
+import "../styles/cardstyle.css";
 const ItemList = ({ item }) => {
   const dispatch = useDispatch();
   //update cart handler
@@ -16,6 +17,7 @@ const ItemList = ({ item }) => {
       <Card
         style={{ width: 240, marginBottom: 20 }}
         cover={<img alt={item.name} src={item.image} style={{ height: 200 }} />}
+        className="cart-styling"
       >
         <Meta title={item.name} />
         <div className="item-button">

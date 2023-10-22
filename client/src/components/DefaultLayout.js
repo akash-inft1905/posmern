@@ -14,6 +14,8 @@ import {
 } from "@ant-design/icons";
 import "../styles/DefaultLayout.css";
 import Spinner from "./Spinner";
+import "../styles/menu.css";
+import "../index.css";
 const { Header, Sider, Content } = Layout;
 
 const DefaultLayout = ({ children }) => {
@@ -32,26 +34,40 @@ const DefaultLayout = ({ children }) => {
   return (
     <Layout>
       {loading && <Spinner />}
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        className="menucss"
+      >
         <div className="logo">
-          <h1 className="text-center text-light font-wight-bold mt-4">POS</h1>
+          <h1 className="text-center text-dark font-wight-bold mt-4">POS</h1>
         </div>
         <Menu
-          theme="dark"
+          // theme="dark"
+          className="menucss"
           mode="inline"
           defaultSelectedKeys={window.location.pathname}
         >
           <Menu.Item key="/" icon={<HomeOutlined />}>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <h6>Home</h6>
+            </Link>
           </Menu.Item>
           <Menu.Item key="/bills" icon={<CopyOutlined />}>
-            <Link to="/bills">Bills</Link>
+            <Link to="/bills">
+              <h6>Bills</h6>
+            </Link>
           </Menu.Item>
           <Menu.Item key="/items" icon={<UnorderedListOutlined />}>
-            <Link to="/items">Items</Link>
+            <Link to="/items">
+              <h6>Items</h6>
+            </Link>
           </Menu.Item>
           <Menu.Item key="/customers" icon={<UserOutlined />}>
-            <Link to="/customers">Cutomers</Link>
+            <Link to="/customers">
+              <h6>Cutomers</h6>
+            </Link>
           </Menu.Item>
           <Menu.Item
             key="/logout"
@@ -61,7 +77,7 @@ const DefaultLayout = ({ children }) => {
               navigate("/login");
             }}
           >
-            Logout
+            <h6> Logout</h6>
           </Menu.Item>
         </Menu>
       </Sider>
